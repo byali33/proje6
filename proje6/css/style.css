@@ -1,0 +1,251 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+i{
+    cursor: pointer;
+}
+.work{
+    height: 100vh;
+    background-color: #161616;
+    color: #fff;
+    
+}
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:2rem .9rem;
+    font-size: 1.6rem;
+}
+.three{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.three div{
+    margin-top: .4rem;
+}
+.three div span{
+    display: block;
+    height: .2rem;
+    width: 4.5rem;
+    margin-top: .4rem;
+    background-color: #fff;
+}
+.text{
+    font-size: 2.6rem;
+    padding-left: .3rem;
+    font-weight: bolder;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.col{
+    flex:50%;
+}
+.col h1{
+    font-size: 6rem;
+    line-height: 6rem;
+    letter-spacing: .3rem;
+    font-weight: bolder;
+    margin-bottom: 2rem;
+}
+.col p{
+    font-size: 1.4rem;
+    line-height: 3rem;
+}
+.btn{
+    display: block;
+    padding: .8rem 2rem;
+    border: none;
+    border-radius: 3.5rem;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: #e0484b;
+    cursor: pointer;
+    transition: 1s;
+    margin-top: 4.5rem;
+}
+
+.btn:hover{
+    background-color: #7A191B;
+}
+
+.h1{
+    color: #1F1E1E;
+    text-transform: uppercase;
+    position: absolute;
+    top: 36.5rem;
+    right: 0;
+    font-size: 15rem;
+    letter-spacing: .4rem;
+    z-index: 1;
+}
+
+.col img{
+    position: relative;
+    width: 40rem;
+    margin: 5.5rem 0 0 13.5rem; 
+    z-index: 3;
+}
+
+.ring .circle{
+    display: block;
+    position: relative;
+    height: 41rem;
+    width: 41rem;
+    border: .3rem solid #3c3c3c;
+    background:transparent;
+    z-index: 2;
+    border-radius: 50%;
+    margin: -41rem 0 0 13rem;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    
+}
+.ring .circle:before{
+    content: "";
+    position: absolute;
+    top: -.3rem;
+    left: -.3rem;
+    width: 100%;
+    height: 100%;
+    border: 3px solid transparent;
+    border-top: 3px solid #fff12e;
+    border-right: 3px solid #fff12e;
+    border-radius: 50%;
+    z-index: -1;
+    animation: returnCircle 10s linear infinite;
+}
+.ring .circle2{
+    display: block;
+    position: absolute;
+    top: 32.6rem;
+    left: 102rem;
+    width: 15%;
+    height: .4rem;
+    background:transparent;
+    transform-origin: left;
+    z-index: 2;
+    animation: return 10s linear infinite;
+}
+.ring .circle2:before{
+    content: "";
+    position: absolute;
+    top: -.6rem;
+    left: 19.5rem;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%;
+    box-shadow: 0 0 20px #fff12e;
+    background-color: #fff12e;
+   
+}
+
+.ring2 .circle{
+    display: block;
+    position: relative;
+    height: 50rem;
+    width: 50rem;
+    border: .3rem solid #3c3c3c;
+    background:transparent;
+    z-index: 2;
+    border-radius: 50%;
+    margin: -45.5rem 0 0 8.5rem;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    
+}
+.ring2 .circle:before{
+    content: "";
+    position: absolute;
+    top: -.3rem;
+    left: -.3rem;
+    width: 100%;
+    height: 100%;
+    border: 3px solid transparent;
+    border-bottom: 3px solid #fff12e;
+    border-left: 3px solid #fff12e;
+    border-radius: 50%;
+    animation: returnCircle2 10s linear infinite;
+}
+.ring2 .circle2{
+    display: block;
+    position: absolute;
+    top: 52%;
+    left: 74.6%;
+    width: 18%;
+    height: .4rem;
+    background:transparent;
+    transform-origin: left;
+    z-index: 3;
+    animation: return2 10s linear infinite;
+}
+.ring2 .circle2:before{
+    content: "";
+    position: absolute;
+    top: -.6rem;
+    right: -1rem;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%;
+    box-shadow: 0 0 20px #fff12e;
+    background-color: #fff12e;
+   
+}
+
+@keyframes returnCircle{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes return{
+    0%{
+        transform: rotate(45deg);
+    }
+    100%{
+        transform: rotate(405deg);
+    }
+}
+
+@keyframes returnCircle2{
+    0%{
+        transform: rotate(-45deg);
+    }
+    100%{
+        transform: rotate(-405deg);
+    }
+}
+@keyframes return2{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+
+@media (max-width:768px){
+    html{
+        font-size: 9px;
+    }
+}
